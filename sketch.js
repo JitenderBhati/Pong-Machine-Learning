@@ -11,9 +11,9 @@ var flag = false;
 
 
 function setup() {
-
+    createCanvas(780, windowHeight-20);
     video = createCapture(VIDEO);
-    createCanvas(600, 400);
+
     ding = loadSound("./data/ding.mp3");
     puck = new Puck();
     left = new Paddle(true);
@@ -86,7 +86,7 @@ function trains()
    if(loss==null)
    {
        let training =    document.getElementById("train").innerHTML = "Train It!";
-     alert("Ready To Play");
+     // alert("Ready To Play");
      classifier.classify(gotResult);
      flag  = true;
    }
